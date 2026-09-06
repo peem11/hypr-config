@@ -1,9 +1,9 @@
 -- MONITOR CONFIG
 hl.monitor({
-    output = "HDMI-A-2",
-    mode = "1920x1080@240",
+    output = "eDP-1",
+    mode = "1920x1080@60",
     position = "auto",
-    scale = 1
+    scale = 1.25
 })
 
 hl.monitor({
@@ -259,14 +259,19 @@ hl.animation({
     speed = 3,
     bezier = "standardDecel"
 })
+hl.device({
+    name = "logitech-pro-x-1", -- Replace with your exact device name
+    sensitivity = -0.5,     -- Tailored sensitivity for this device
+})
 
 hl.config({
     input = {
-        kb_layout = "us",
+        kb_layout = "us,ca",
+        kb_variant = ",fr",
+        kb_options = "grp:win_space_toggle",
         numlock_by_default = true,
         repeat_delay = 250,
         repeat_rate = 35,
-
         follow_mouse = 1,
         off_window_axis_events = 2,
 
